@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+
 import Modal from '../../components/modal/modal.component';
 import Select from '../../components/select/select.component';
+import SeparationLine from '../../components/separation-line/separation-line.component';
+import DragNDrop from '../../components/drag-n-drop/drag-n-drop.component';
+
 import { selectOptions } from '../../utils/mock-values';
 import {
   DocumentUploadContainer,
@@ -9,7 +13,7 @@ import {
   TitleContainer,
   LeftSection,
   RightSection,
-  ContinueSection
+  ContinueSection,
 } from './document-upload.styles';
 
 const DocumentUpload = () => {
@@ -27,6 +31,8 @@ const DocumentUpload = () => {
           <TitleContainer><Title>Document Upload</Title></TitleContainer>
           <LeftSection>
             <Select options={selectOptions} placeholder='Select Import Name:' />
+            <SeparationLine />
+            <DragNDrop />
           </LeftSection>
           <RightSection>Second Column</RightSection>
           <ContinueSection>Buttons</ContinueSection>

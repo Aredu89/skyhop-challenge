@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose, children }) => (
       }
     }}
   >
-    <Button>&#x2715;</Button>
+    <Button close='true'>&#x2715;</Button>
     <ContentContainer>
       {children}
     </ContentContainer>

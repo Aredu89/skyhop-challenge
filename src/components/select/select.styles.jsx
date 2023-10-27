@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TEXT_COLOR, BORDER_COLOR } from '../../styles/variables';
+import { PRIMARY_COLOR, BORDER_COLOR } from '../../styles/variables';
 
 export const SelectContainer = styled.div``;
 
@@ -11,7 +11,7 @@ export const StyledSelect = styled.select`
   font-family: inherit;
   font-weight: 800;
   padding: 8px 10px;
-  color: ${TEXT_COLOR};
+  color: ${PRIMARY_COLOR};
   border-radius: 8px;
   border: 1.5px solid ${BORDER_COLOR};
   background-image: url(/collapse-arrow.png);

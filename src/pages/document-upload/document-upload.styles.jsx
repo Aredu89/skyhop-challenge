@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BACKGROUND_COLOR, TEXT_COLOR, BORDER_COLOR } from '../../styles/variables';
+import { BACKGROUND_COLOR, PRIMARY_COLOR, BORDER_COLOR } from '../../styles/variables';
 
 export const DocumentUploadContainer = styled.div`
   background-color: ${BACKGROUND_COLOR};
@@ -11,7 +11,7 @@ export const FormContainer = styled.div`
   grid-template-rows: auto 1fr auto;
   column-gap: 50px;
   width: 720px;
-  color: ${TEXT_COLOR}
+  color: ${PRIMARY_COLOR}
 `;
 
 export const TitleContainer = styled.div`
