@@ -7,8 +7,9 @@ export const DocumentUploadContainer = styled.div`
 
 export const FormContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 55% 1fr;
   grid-template-rows: auto 1fr auto;
+  column-gap: 50px;
   width: 720px;
   color: ${TEXT_COLOR}
 `;
@@ -18,7 +19,7 @@ export const TitleContainer = styled.div`
   grid-row: 1 / 1;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 `;
 
 export const Title = styled.h2`
@@ -45,4 +46,5 @@ export const ContinueSection = styled.div`
   grid-row: 3 / 4;
   display: flex;
   justify-content: center;
+  padding: 34px;
 `;

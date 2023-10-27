@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../../components/modal/modal.component';
+import Select from '../../components/select/select.component';
+import { selectOptions } from '../../utils/mock-values';
 import {
   DocumentUploadContainer,
   FormContainer,
@@ -23,7 +25,9 @@ const DocumentUpload = () => {
       <Modal isOpen={isModalOpen} onClose={handleToggleModal}>
         <FormContainer>
           <TitleContainer><Title>Document Upload</Title></TitleContainer>
-          <LeftSection>First column</LeftSection>
+          <LeftSection>
+            <Select options={selectOptions} placeholder='Select Import Name:' />
+          </LeftSection>
           <RightSection>Second Column</RightSection>
           <ContinueSection>Buttons</ContinueSection>
         </FormContainer>
