@@ -18,6 +18,7 @@ const Modal = ({ isOpen, onClose, children }) => (
         justifyContent: 'center'
       },
       content: {
+        position: 'initial',
         border: 'none',
         borderRadius: '20px',
         padding: '25px',

@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import Modal from '../../components/modal/modal.component';
-import { DocumentUploadContainer } from './document-upload.styles';
+import {
+  DocumentUploadContainer,
+  FormContainer,
+  Title,
+  TitleContainer,
+  LeftSection,
+  RightSection,
+  ContinueSection
+} from './document-upload.styles';
 
 const DocumentUpload = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -13,7 +21,12 @@ const DocumentUpload = () => {
   return (
     <DocumentUploadContainer>
       <Modal isOpen={isModalOpen} onClose={handleToggleModal}>
-        <div>Document Upload component lalallalalallalalla</div>
+        <FormContainer>
+          <TitleContainer><Title>Document Upload</Title></TitleContainer>
+          <LeftSection>First column</LeftSection>
+          <RightSection>Second Column</RightSection>
+          <ContinueSection>Buttons</ContinueSection>
+        </FormContainer>
       </Modal>
     </DocumentUploadContainer>
   );
