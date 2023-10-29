@@ -1,10 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { AiFillFileText } from 'react-icons/ai';
 import { SECONDARY_COLOR } from '../../styles/variables';
 import Button from '../button/button.component';
 import SubTitle from '../sub-title/sub-title.component';
 import FileItem from '../file-item/file-item.component';
+import { FilesContext } from '../../context/files.context';
+
 import {
   DropzoneContainer,
   DropzoneBox,
@@ -12,13 +14,12 @@ import {
 } from './drag-n-drop.styles';
 
 const DragNDrop = () => {
-  const [loadedFiles, setLoadedFiles] = useState([]);
+  const { loadedFiles, setLoadedFiles} = useContext(FilesContext);
   const onDrop = useCallback(acceptedFiles => {
     // Do something with the files
-    console.log('ACCEPTED FILES::: ', acceptedFiles);
     setLoadedFiles(acceptedFiles);
-  }, []);
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
+  }, [setLoadedFiles]);
+  const {getRootProps, getInputProps} = useDropzone({onDrop});
 
   return (
     <div>

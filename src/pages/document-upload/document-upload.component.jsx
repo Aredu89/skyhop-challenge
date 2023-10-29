@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Modal from '../../components/modal/modal.component';
 import Select from '../../components/select/select.component';
 import SeparationLine from '../../components/separation-line/separation-line.component';
 import DragNDrop from '../../components/drag-n-drop/drag-n-drop.component';
 import ValidationSection from '../../components/validation-section/validation-section.component';
+import { FilesContext } from '../../context/files.context';
 
 import { selectOptions } from '../../utils/mock-values';
 import {
@@ -19,11 +20,14 @@ import {
 
 const DocumentUpload = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const { loadedFiles } = useContext(FilesContext);
 
   const handleToggleModal = () => {
     //We wont make the modal close for this challenge
-    //setIsModalOpen(prev => !prev);
+    setIsModalOpen(prev => prev);
   };
+
+  const filesReady = loadedFiles.length > 0;
 
   return (
     <DocumentUploadContainer>
@@ -37,6 +41,7 @@ const DocumentUpload = () => {
             <ValidationSection
               title='Elapse Data Checking:'
               message='No Elapsed Dates!'
+              ready={filesReady}
             />
           </LeftSection>
           <RightSection>Second Column</RightSection>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SUCCESS_COLOR } from '../../styles/variables';
+import { SUCCESS_COLOR, MEDIUM_GRAY } from '../../styles/variables';
 
 export const ValidationContainer = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const ValidationContainer = styled.div`
 `;
 
 export const SuccessMessage = styled.span`
-  color: ${SUCCESS_COLOR};
+  color: ${({$ready}) => $ready ? SUCCESS_COLOR : MEDIUM_GRAY};
   font-size: 11px;
   font-weight: 800;
 `;
