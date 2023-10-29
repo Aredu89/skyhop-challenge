@@ -6,6 +6,7 @@ import SeparationLine from '../../components/separation-line/separation-line.com
 import DragNDrop from '../../components/drag-n-drop/drag-n-drop.component';
 import ValidationSection from '../../components/validation-section/validation-section.component';
 import Toggle from '../../components/toggle/toggle.component';
+import ContinueButtons from '../../components/continue-buttons/continue-buttons.component';
 import { FilesContext } from '../../context/files.context';
 
 import { selectOptions } from '../../utils/mock-values';
@@ -16,7 +17,7 @@ import {
   TitleContainer,
   LeftSection,
   RightSection,
-  ContinueSection,
+  ContinueSectionContainer,
 } from './document-upload.styles';
 
 const DocumentUpload = () => {
@@ -50,7 +51,7 @@ const DocumentUpload = () => {
             />
           </LeftSection>
           <RightSection>Second Column</RightSection>
-          <ContinueSection>Buttons</ContinueSection>
+          <ContinueSectionContainer><ContinueButtons ready={filesReady} /></ContinueSectionContainer>
         </FormContainer>
       </Modal>
     </DocumentUploadContainer>

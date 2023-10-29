@@ -41,10 +41,10 @@ export const RightSection = styled.div`
   grid-row: 2 / 3;
 `;
 
-export const ContinueSection = styled.div`
+export const ContinueSectionContainer = styled.div`
   grid-column: 1 / 3;
   grid-row: 3 / 4;
   display: flex;
   justify-content: center;
-  padding: 34px;
+  padding: 18px 34px 34px;
 `;
