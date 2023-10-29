@@ -31,8 +31,9 @@ const DocumentUpload = () => {
           <TitleContainer><Title>Document Upload</Title></TitleContainer>
           <LeftSection>
             <Select options={selectOptions} placeholder='Select Import Name:' />
-            <SeparationLine />
+            <SeparationLine marginTop={18} />
             <DragNDrop />
+            <SeparationLine marginTop={14} />
           </LeftSection>
           <RightSection>Second Column</RightSection>
           <ContinueSection>Buttons</ContinueSection>

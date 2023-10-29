@@ -9,8 +9,9 @@ const closeStyles = css`
 
 const standardStyles = css`
   font-size: 12px;
-  padding: 6px 40px;
-  border-radius: 6px;
+  font-weight: 600;
+  padding: 6px 34px;
+  border-radius: 4px;
 `;
 
 export const StyledButton = styled.button`

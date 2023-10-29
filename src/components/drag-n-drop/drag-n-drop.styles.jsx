@@ -5,7 +5,7 @@ export const DropzoneContainer = styled.div`
   width: 92.5%;
   border: 1.5px solid ${BORDER_COLOR};
   border-radius: 8px;
-  padding: 13px;
+  padding: 13px 13px 8px;
   margin-bottom: 12px;
 `;
 
@@ -23,7 +23,7 @@ export const DropzoneBox = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 `;
