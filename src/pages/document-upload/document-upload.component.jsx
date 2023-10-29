@@ -4,6 +4,7 @@ import Modal from '../../components/modal/modal.component';
 import Select from '../../components/select/select.component';
 import SeparationLine from '../../components/separation-line/separation-line.component';
 import DragNDrop from '../../components/drag-n-drop/drag-n-drop.component';
+import ValidationSection from '../../components/validation-section/validation-section.component';
 
 import { selectOptions } from '../../utils/mock-values';
 import {
@@ -33,7 +34,10 @@ const DocumentUpload = () => {
             <Select options={selectOptions} placeholder='Select Import Name:' />
             <SeparationLine marginTop={18} />
             <DragNDrop />
-            <SeparationLine marginTop={14} />
+            <ValidationSection
+              title='Elapse Data Checking:'
+              message='No Elapsed Dates!'
+            />
           </LeftSection>
           <RightSection>Second Column</RightSection>
           <ContinueSection>Buttons</ContinueSection>
