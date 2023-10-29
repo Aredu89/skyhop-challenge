@@ -21,6 +21,7 @@ export const StyledButton = styled.button`
   appearance: none;
   &:hover {
     cursor: pointer;
+    opacity: .9;
   }
-  ${({ close }) => close ? closeStyles : standardStyles}
+  ${({ $close }) => $close ? closeStyles : standardStyles}
 `;
