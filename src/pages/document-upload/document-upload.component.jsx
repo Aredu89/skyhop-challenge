@@ -31,6 +31,14 @@ const DocumentUpload = () => {
 
   const filesReady = loadedFiles.length > 0;
 
+  const handleContinueImport = () => {
+    console.log('Continue Import!');
+  };
+
+  const handleCancel = () => {
+    console.log('Cancel Import!');
+  };
+
   return (
     <DocumentUploadContainer>
       <Modal isOpen={isModalOpen} onClose={handleToggleModal}>
@@ -51,7 +59,9 @@ const DocumentUpload = () => {
             />
           </LeftSection>
           <RightSection>Second Column</RightSection>
-          <ContinueSectionContainer><ContinueButtons ready={filesReady} /></ContinueSectionContainer>
+          <ContinueSectionContainer>
+            <ContinueButtons ready={filesReady} onContinue={handleContinueImport} onCancel={handleCancel} />
+          </ContinueSectionContainer>
         </FormContainer>
       </Modal>
     </DocumentUploadContainer>

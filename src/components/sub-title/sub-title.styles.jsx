@@ -5,4 +5,5 @@ export const StyledSubTitle = styled.h4`
   margin-bottom: ${({ $marginBottom }) => `${$marginBottom}px`};
   font-size: ${({$big}) => $big ? '14px' : '11px'};
   font-weight: 800;
+  ${({$big}) => $big ? 'text-align: center' : ''}
 `;

@@ -19,6 +19,7 @@ const Modal = ({ isOpen, onClose, children }) => (
       },
       content: {
         position: 'initial',
+        height: 'fit-content',
         border: 'none',
         borderRadius: '20px',
         padding: '25px',

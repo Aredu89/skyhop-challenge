@@ -16,7 +16,7 @@ const standardStyles = css`
 
 const bigStyles = css`
   width: 190px;
-  height: 40px;
+  height: 38px;
   font-size: 11px;
   font-weight: 600;
   border-radius: 6px;
