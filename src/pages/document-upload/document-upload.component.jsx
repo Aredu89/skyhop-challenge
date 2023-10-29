@@ -5,6 +5,7 @@ import Select from '../../components/select/select.component';
 import SeparationLine from '../../components/separation-line/separation-line.component';
 import DragNDrop from '../../components/drag-n-drop/drag-n-drop.component';
 import ValidationSection from '../../components/validation-section/validation-section.component';
+import Toggle from '../../components/toggle/toggle.component';
 import { FilesContext } from '../../context/files.context';
 
 import { selectOptions } from '../../utils/mock-values';
@@ -42,6 +43,10 @@ const DocumentUpload = () => {
               title='Elapse Data Checking:'
               message='No Elapsed Dates!'
               ready={filesReady}
+            />
+            <Toggle
+              title='Tolerance Window:'
+              topic='Tolerance Level'
             />
           </LeftSection>
           <RightSection>Second Column</RightSection>
