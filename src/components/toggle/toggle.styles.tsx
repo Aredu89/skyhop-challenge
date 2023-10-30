@@ -14,7 +14,7 @@ export const Slider = styled.span`
   right: 0;
   bottom: 0;
   border-radius: 34px;
-  background-color: ${PRIMARY_COLOR};
+  background-color: ${DARK_GRAY};
   -webkit-transition: .2s;
   transition: .2s;
 
@@ -23,7 +23,7 @@ export const Slider = styled.span`
     content: '';
     height: 16px;
     width: 16px;
-    left: 18px;
+    left: 2px;
     bottom: 2px;
     border-radius: 50%;
     background-color: white;
@@ -45,15 +45,15 @@ export const Switch = styled.label`
     height: 0;
 
     &:checked + ${Slider} {
-      background-color: ${DARK_GRAY};
+      background-color: ${PRIMARY_COLOR};
     }
     &:focus + ${Slider} {
-      box-shadow: 0 0 1px ${DARK_GRAY};
+      box-shadow: 0 0 1px ${PRIMARY_COLOR};
     }
     &:checked + ${Slider}:before {
-      -webkit-transform: translateX(-16px);
-      -ms-transform: translateX(-16px);
-      transform: translateX(-16px);
+      -webkit-transform: translateX(16px);
+      -ms-transform: translateX(16px);
+      transform: translateX(16px);
     }
   }
 `;

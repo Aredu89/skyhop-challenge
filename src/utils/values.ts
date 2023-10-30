@@ -1,4 +1,4 @@
-export const formatSize = (bytes) => {
+export const formatSize = (bytes: number) => {
   if(bytes >= 1073741824) {
     return (bytes / 1073741824).toFixed(1) + 'GB';
   }

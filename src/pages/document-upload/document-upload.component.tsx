@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect, ChangeEvent } from 'react';
 
 import Modal from '../../components/modal/modal.component';
 import Select from '../../components/select/select.component';
@@ -54,11 +54,11 @@ const DocumentUpload = () => {
     console.log('Cancel Import!');
   };
 
-  const handleIsSplitScheduleChange = (event) => {
+  const handleIsSplitScheduleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setIsSplitSchedule(event.target.value);
   };
   
-  const handleClientSelectionChange = (event) => {
+  const handleClientSelectionChange = (event: ChangeEvent<HTMLInputElement>) => {
     setClientSelection(event.target.value);
   };
 

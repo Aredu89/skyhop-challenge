@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import SubTitle from '../sub-title/sub-title.component';
 import { BsClock } from 'react-icons/bs';
 import {
@@ -8,8 +8,9 @@ import {
   TextToggleContainer,
   TextTopicContainer
 } from './toggle.styles';
+import { ToggleProps } from './toggle.types';
 
-const Toggle = ({title, topic}) => {
+const Toggle = ({title, topic}: ToggleProps) => {
   const [selected, setSelected]= useState(true);
   return (
     <div>
@@ -18,7 +19,7 @@ const Toggle = ({title, topic}) => {
         <Switch>
           <input
             type='checkbox'
-            value={selected}
+            checked={selected}
             onChange={() => setSelected(prev => !prev)}
           />
           <Slider />
