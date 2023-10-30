@@ -9,7 +9,7 @@ import Toggle from '../../components/toggle/toggle.component';
 import ContinueButtons from '../../components/continue-buttons/continue-buttons.component';
 import RadioButton from '../../components/radio-button/radio-button.component';
 import ClientSelects from '../../components/client-selects/client-selects.component';
-import { FilesContext } from '../../context/files.context';
+import { FilesContext } from '../../context/files/files.context';
 
 import { titleOptions } from '../../utils/mock-values';
 import {
@@ -104,7 +104,6 @@ const DocumentUpload = () => {
               />
               <ClientSelects
                 clients={clients}
-                setClients={setClients}
               />
             </ClientSection>
           </RightSection>

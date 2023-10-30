@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { BUTTON_TYPES } from './button.types';
 import { PRIMARY_COLOR, SECONDARY_COLOR, MEDIUM_GRAY } from '../../styles/variables';
 
 const closeStyles = css`
@@ -34,7 +35,7 @@ const bigRevertedStyles = css`
   }
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{$type: BUTTON_TYPES}>`
   background-color: ${PRIMARY_COLOR};
   font-family: inherit;
   color: white;
@@ -52,13 +53,13 @@ export const StyledButton = styled.button`
     }
   }
   ${({ $type }) => {
-    if($type === 'close') {
+    if($type === BUTTON_TYPES.Close) {
       return closeStyles
     }
-    if($type === 'big') {
+    if($type === BUTTON_TYPES.Big) {
       return bigStyles
     }
-    if($type === 'bigReverted') {
+    if($type === BUTTON_TYPES.BigReverted) {
       return bigRevertedStyles
     }
     return standardStyles

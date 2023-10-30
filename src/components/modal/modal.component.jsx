@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 import Button from '../button/button.component';
 import { BACKGROUND_COLOR } from '../../styles/variables';
 import { ContentContainer } from './modal.styles';
+import { BUTTON_TYPES } from '../button/button.types';
 
 //Setting app element to support accessibility
 ReactModal.setAppElement('#root');
@@ -28,7 +29,7 @@ const Modal = ({ isOpen, onClose, children }) => (
       }
     }}
   >
-    <Button type='close'>&#x2715;</Button>
+    <Button type={BUTTON_TYPES.Close}>&#x2715;</Button>
     <ContentContainer>
       {children}
     </ContentContainer>

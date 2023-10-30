@@ -1,7 +1,7 @@
-import React from 'react';
 import { StyledButton } from './button.styles';
+import { ButtonProps, BUTTON_TYPES } from './button.types';
 
-const Button = ({ children, type = 'standard', onClick, disabled = false }) => (
+const Button = ({ children, type = BUTTON_TYPES.Standard, onClick, disabled = false }: ButtonProps) => (
   <StyledButton
     $type={type}
     onClick={onClick}
