@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { PRIMARY_COLOR, BORDER_COLOR } from '../../styles/variables';
+import { StyledSelectProps } from './select.types';
 
-export const StyledSelect = styled.select`
+export const StyledSelect = styled.select<StyledSelectProps>`
   appearance: none;
   -webkit-appearance: none;
   width: 100%;

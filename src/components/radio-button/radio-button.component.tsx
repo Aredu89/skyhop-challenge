@@ -1,6 +1,6 @@
-import React from 'react';
 import SubTitle from '../sub-title/sub-title.component';
 import { RadioContainer, Radio, Label } from './radio-button.styles';
+import { RadioButtonProps } from './radio-button.types';
 
 const RadioButton = ({
   title,
@@ -8,7 +8,7 @@ const RadioButton = ({
   name,
   value,
   onChange
-}) => (
+}: RadioButtonProps) => (
   <>
     <SubTitle marginTop={0}>{title}</SubTitle>
     <RadioContainer>

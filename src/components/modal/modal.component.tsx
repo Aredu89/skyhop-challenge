@@ -1,14 +1,14 @@
-import React from 'react';
 import ReactModal from 'react-modal';
 import Button from '../button/button.component';
 import { BACKGROUND_COLOR } from '../../styles/variables';
 import { ContentContainer } from './modal.styles';
 import { BUTTON_TYPES } from '../button/button.types';
+import { ModalProps } from './modal.types';
 
 //Setting app element to support accessibility
 ReactModal.setAppElement('#root');
 
-const Modal = ({ isOpen, onClose, children }) => (
+const Modal = ({ isOpen, onClose, children }: ModalProps) => (
   <ReactModal
     isOpen={isOpen}
     onRequestClose={onClose}
@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose, children }) => (
       }
     }}
   >
-    <Button type={BUTTON_TYPES.Close}>&#x2715;</Button>
+    <Button type={BUTTON_TYPES.Close} onClick={onClose}>&#x2715;</Button>
     <ContentContainer>
       {children}
     </ContentContainer>

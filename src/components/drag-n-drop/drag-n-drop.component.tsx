@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import { useCallback, useContext } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { AiFillFileText } from 'react-icons/ai';
 import { SECONDARY_COLOR } from '../../styles/variables';

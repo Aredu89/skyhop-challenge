@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LIGHT_GRAY, SECONDARY_COLOR } from '../../styles/variables';
+import { InnerBarProps } from './loading-bar.types';
 
 export const OuterBar = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const OuterBar = styled.div`
   background-color: ${LIGHT_GRAY};
 `;
 
-export const InnerBar = styled.div`
+export const InnerBar = styled.div<InnerBarProps>`
   width: ${({ $percentage }) => `${$percentage}%`};
   height: 3px;
   border-radius: 10px;

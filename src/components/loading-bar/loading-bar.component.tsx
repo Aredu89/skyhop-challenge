@@ -1,10 +1,10 @@
-import React from 'react';
 import {
   OuterBar,
   InnerBar
 } from './loading-bar.styles';
+import { LoadingBarProps } from './loading-bar.types';
 
-const LoadingBar = ({percentage = 1}) => (
+const LoadingBar = ({percentage = 1}: LoadingBarProps) => (
   <OuterBar><InnerBar $percentage={percentage} /></OuterBar>
 );
 
