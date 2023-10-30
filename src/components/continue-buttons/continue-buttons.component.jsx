@@ -8,7 +8,7 @@ import {
 
 const ContinueButtons = ({onContinue, onCancel, ready}) => (
   <ContinueButtonsContainer>
-    <SubTitle big marginBottom={18}>
+    <SubTitle big marginBottom={20}>
       {ready ? 'Data in the import file is correct. Please press Continue to import.' : 'Please import a file'}
     </SubTitle>
     <ButtonsContainer>
