@@ -4,7 +4,7 @@ import { SUCCESS_COLOR, MEDIUM_GRAY } from '../../styles/variables';
 export const ValidationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 0 12px;
+  padding: 0 0 11px;
 `;
 
 export const SuccessMessage = styled.span`

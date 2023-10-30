@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const ClientsContainer = styled.div`
-  margin-top: 10px;
+  margin-top: 12px;
 `;
 
 export const Text = styled.span`
-  margin-right: 24px;
+  margin-right: 28px;
 `;
 
 export const ClientContainer = styled.div`
   display: grid;
-  grid-template-columns: auto 120px 1fr;
+  grid-template-columns: 120px 116px 1fr;
   gap: 10px;
   align-items: center;
   font-size: 11px;

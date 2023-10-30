@@ -4,7 +4,7 @@ import { LIGHT_GRAY, MEDIUM_GRAY, DARK_GRAY } from '../../styles/variables';
 export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 14px 12px;
+  padding: 13px 12px;
   border-top: 1px solid ${LIGHT_GRAY};
   border-bottom: 1px solid ${LIGHT_GRAY};
   color: ${MEDIUM_GRAY};

@@ -19,7 +19,7 @@ export const Label = styled.label`
     height: 16px;
     position: relative;
     top: -0.2em;
-    margin-right: 1em; 
+    margin-right: 6px;; 
     vertical-align: top;
     cursor: pointer;
     text-align: center;

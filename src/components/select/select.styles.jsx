@@ -8,7 +8,7 @@ export const StyledSelect = styled.select`
   font-size: 11px;
   font-family: inherit;
   font-weight: ${({$light}) => $light ? '400' : '800'};
-  padding: 8px 10px;
+  padding: ${({$light}) => $light ? '9px' : '8px'} 10px;
   color: ${PRIMARY_COLOR};
   border-radius: 6px;
   border: ${({$light}) => $light ? '1px' : '1.5px'} solid ${BORDER_COLOR};
