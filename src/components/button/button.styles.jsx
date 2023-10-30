@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../styles/variables';
+import { PRIMARY_COLOR, SECONDARY_COLOR, MEDIUM_GRAY } from '../../styles/variables';
 
 const closeStyles = css`
   font-size: 20px;
@@ -43,6 +43,13 @@ export const StyledButton = styled.button`
   &:hover {
     cursor: pointer;
     opacity: .9;
+  }
+  &:disabled {
+    background-color: ${MEDIUM_GRAY};
+    &:hover {
+      cursor: auto;
+      opacity: 1;
+    }
   }
   ${({ $type }) => {
     if($type === 'close') {

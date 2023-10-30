@@ -1,7 +1,15 @@
-export const selectOptions = [
-  'Option 1',
-  'Option 2',
-  'Option 3',
-  'Option 4',
-  'Option 5'
+export const titleOptions = [
+  'Title 1',
+  'Title 2',
+  'Title 3',
+  'Title 4',
+  'Title 5'
+];
+
+export const clientOptions = [
+  'Client 1',
+  'Client 2',
+  'Client 3',
+  'Client 4',
+  'Client 5'
 ];

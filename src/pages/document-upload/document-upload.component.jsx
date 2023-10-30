@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 
 import Modal from '../../components/modal/modal.component';
 import Select from '../../components/select/select.component';
@@ -8,9 +8,10 @@ import ValidationSection from '../../components/validation-section/validation-se
 import Toggle from '../../components/toggle/toggle.component';
 import ContinueButtons from '../../components/continue-buttons/continue-buttons.component';
 import RadioButton from '../../components/radio-button/radio-button.component';
+import ClientSelects from '../../components/client-selects/client-selects.component';
 import { FilesContext } from '../../context/files.context';
 
-import { selectOptions } from '../../utils/mock-values';
+import { titleOptions } from '../../utils/mock-values';
 import {
   DocumentUploadContainer,
   FormContainer,
@@ -18,13 +19,25 @@ import {
   TitleContainer,
   LeftSection,
   RightSection,
+  ClientSection,
   ContinueSectionContainer,
 } from './document-upload.styles';
 
 const DocumentUpload = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [isSplitSchedule, setIsSplitSchedule] = useState('Yes');
+  const [clientSelection, setClientSelection] = useState('Multiple');
+  const [clients, setClients] = useState(['', '', '', '']);
   const { loadedFiles } = useContext(FilesContext);
+
+  useEffect(() => {
+    if(clientSelection === 'Multiple') {
+      return setClients(['', '', '', '']);
+    };
+    if(clientSelection === 'Single') {
+      return setClients(['']);
+    };
+  }, [clientSelection]);
 
   const handleToggleModal = () => {
     //We wont make the modal close for this challenge
@@ -44,6 +57,10 @@ const DocumentUpload = () => {
   const handleIsSplitScheduleChange = (event) => {
     setIsSplitSchedule(event.target.value);
   };
+  
+  const handleClientSelectionChange = (event) => {
+    setClientSelection(event.target.value);
+  };
 
   return (
     <DocumentUploadContainer>
@@ -51,7 +68,7 @@ const DocumentUpload = () => {
         <FormContainer>
           <TitleContainer><Title>Document Upload</Title></TitleContainer>
           <LeftSection>
-            <Select options={selectOptions} placeholder='Select Import Name:' />
+            <Select options={titleOptions} placeholder='Select Import Name:' />
             <SeparationLine marginTop={18} />
             <DragNDrop />
             <ValidationSection
@@ -72,6 +89,24 @@ const DocumentUpload = () => {
               options={['Yes', 'No']}
               onChange={handleIsSplitScheduleChange}
             />
+            <ValidationSection
+              title='Location Checking:'
+              message='All Available!'
+              ready={filesReady}
+            />
+            <ClientSection>
+              <RadioButton
+                name='client-selection'
+                title='Client:'
+                value={clientSelection}
+                options={['Single', 'Multiple']}
+                onChange={handleClientSelectionChange}
+              />
+              <ClientSelects
+                clients={clients}
+                setClients={setClients}
+              />
+            </ClientSection>
           </RightSection>
           <ContinueSectionContainer>
             <ContinueButtons ready={filesReady} onContinue={handleContinueImport} onCancel={handleCancel} />

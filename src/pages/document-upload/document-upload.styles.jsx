@@ -41,6 +41,10 @@ export const RightSection = styled.div`
   grid-row: 2 / 3;
 `;
 
+export const ClientSection = styled.div`
+  margin-top: 14px;
+`;
+
 export const ContinueSectionContainer = styled.div`
   grid-column: 1 / 3;
   grid-row: 3 / 4;
